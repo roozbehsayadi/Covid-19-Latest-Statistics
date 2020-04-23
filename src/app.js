@@ -2,6 +2,8 @@
 var express = require('express');
 var app = express();
 
+const PORT = process.env.PORT;
+
 const fetch = require('node-fetch');
 
 //app.engine('ejs', require('ejs').renderFile);
@@ -14,5 +16,5 @@ app.get('/', function(req, res) {
 	.then(json => res.render('pages/home', json ));
 });
 
-app.listen(3000);
-console.log('Listening on port 3000.');
+app.listen(PORT);
+console.log(`Listening on port ${PORT}.`);
