@@ -1,0 +1,17 @@
+{
+  "name": "covid-19-latest-updates",
+  "version": "1.0.0",
+  "description": "Retrieves latest statistics about covid-19 cases around the world (grouped by country), and shows them in a page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "author": "Roozbeh Sayadi",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  }
+}
