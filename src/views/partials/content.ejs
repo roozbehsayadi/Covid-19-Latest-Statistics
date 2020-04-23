@@ -5,3 +5,30 @@
 	<li class="list-group-item">Deaths<span class="badge badge-danger" style="float: right"><%= latest.deaths %></span></li>
 	<li class="list-group-item">Recovered<span class="badge badge-success" style="float: right"><%= latest.recovered %></span></li>
 </ul>
+
+<div style="padding-top: 2%">
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Population</th>
+					<th>Confirmed cases</th>
+					<th>Deaths</th>
+					<th>Recovered</th>
+				</tr>
+			</thead>
+			<tbody>
+				<%locations.forEach(function(current) {%>
+					<tr>
+						<td><%= current.country %></td>
+						<td><%= current.country_population %></td>
+						<td><%= current.latest.confirmed %></td>
+						<td><%= current.latest.deaths %></td>
+						<td><%= current.latest.recovered %></td>
+					</tr>
+				<% }); %>
+			</tbody>
+		</table>
+	</div>
+</div>
